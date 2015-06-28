@@ -1,0 +1,20 @@
+/* IMPORTS */
+
+@font-face{
+    font-family: alef;
+    src: url(fonts/Alef-Regular.ttf) format('truetype');
+}
+@font-face{
+    font-family: alef_bold;
+    src: url(fonts/Alef-Bold.ttf) format('truetype');
+}
+
+/* SETTINGS */
+
+$back-color:    #FF9B66;
+$nav-color:     #5A6FD8;
+$font-color:    LightSlateGray;
+$s-font-color:  #fff;
+
+$s-font: 'alef_bold' , sans-serif;
+$font:   'alef'      , sans-serif;

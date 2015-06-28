@@ -1,0 +1,251 @@
+/* IMPORTS */
+/* IMPORTS */
+@font-face {
+  font-family: alef;
+  src: url(fonts/Alef-Regular.ttf) format("truetype"); }
+@font-face {
+  font-family: alef_bold;
+  src: url(fonts/Alef-Bold.ttf) format("truetype"); }
+/* SETTINGS */
+/* SETTINGS */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased; }
+
+body {
+  overflow-x: hidden; }
+
+::selection {
+  background: #2ecc71;
+  color: white; }
+
+::-moz-selection {
+  background: #2ecc71;
+  color: white; }
+
+.clearer {
+  clear: both; }
+
+* {
+  font-family: "alef", sans-serif;
+  margin: 0; }
+
+body {
+  width: 100%; }
+
+.wrap {
+  background: #5A6FD8;
+  width: 100vw;
+  position: fixed;
+  height: 60px; }
+  .wrap #nav {
+    position: inherit;
+    top: 1.2vh;
+    left: 50%;
+    width: 50%;
+    list-style-type: none;
+    padding: 0;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    text-align: center; }
+    .wrap #nav li {
+      display: inline-block;
+      padding: 0 5%;
+      text-align: center; }
+      .wrap #nav li a {
+        color: #fff;
+        font-size: 1.4em;
+        text-decoration: none; }
+        .wrap #nav li a:hover {
+          text-decoration: underline; }
+        .wrap #nav li a.on {
+          text-decoration: underline; }
+
+.content {
+  width: 100vw; }
+  .content #title {
+    text-align: center;
+    line-height: 25px;
+    padding: 10% 0 1% 0;
+    margin: 0 auto;
+    width: 50%;
+    font-size: 1.2em;
+    color: LightSlateGray !important; }
+    .content #title img {
+      float: left;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -o-border-radius: 50%;
+      -ms-border-radius: 50%;
+      width: 180px;
+      height: 180px; }
+    .content #title span h1 {
+      font-size: 2.2em; }
+    .content #title span h2 {
+      padding-top: 16px;
+      font-size: 1.6em; }
+  .content #about {
+    text-align: right;
+    line-height: 25px;
+    padding: 10% 0 0 0;
+    margin: 0 auto;
+    width: 55%;
+    font-size: 1.2em;
+    color: LightSlateGray !important; }
+    .content #about h3 {
+      width: 90%;
+      margin: 0 auto;
+      padding-bottom: 1%;
+      text-align: center;
+      border-bottom: 2px solid LightSlateGray; }
+    .content #about p {
+      padding-top: 2%; }
+    .content #about p::first-letter {
+      float: right;
+      font-size: 75px;
+      line-height: 50px;
+      padding-top: 0;
+      padding-right: 8px;
+      padding-left: 3px; }
+    .content #about span {
+      display: block;
+      padding-top: 2%; }
+      .content #about span h1 {
+        display: inline;
+        font-size: 64px;
+        line-height: 40px; }
+        .content #about span h1.first {
+          float: right; }
+        .content #about span h1.second {
+          float: left; }
+    .content #about span.after {
+      padding-top: 8%; }
+  .content #map {
+    width: 55%;
+    margin: 2.35% auto 0 auto; }
+    .content #map div {
+      width: 500px;
+      text-align: center; }
+      .content #map div#first {
+        float: right; }
+      .content #map div h5 {
+        font-size: 1.2em;
+        text-decoration: underline;
+        margin-bottom: 2%; }
+  .content .footer_wrap {
+    position: relative;
+    bottom: 0;
+    margin-top: 10%;
+    width: 100%;
+    background: #5A6FD8; }
+    .content .footer_wrap #footer {
+      padding: 15px 0;
+      text-align: center;
+      margin: 0 auto;
+      width: 55%;
+      font-size: 1.2em; }
+      .content .footer_wrap #footer * {
+        font-family: "alef_bold", sans-serif;
+        color: #fff !important;
+        text-decoration: none;
+        padding: 0 1.5%; }
+
+/* LOADING SCREEN */
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -52.60791px;
+  margin-top: -16.66667px;
+  -webkit-transform: rotate(22.5deg);
+  -ms-transform: rotate(22.5deg);
+  transform: rotate(22.5deg); }
+
+.octagon {
+  /*   z-index: 80; */
+  position: absolute;
+  background: #333333;
+  width: 105.21583px;
+  height: 105.21583px;
+  margin-top: -52.60791px;
+  -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%); }
+
+.triangle {
+  position: absolute;
+  width: 105.21583px;
+  height: 125px;
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+  -webkit-clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+  clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+  background: url(http://i.imgur.com/QpNn5XZ.png) transparent no-repeat;
+  -webkit-animation: animatedBackground 6s infinite;
+  animation: animatedBackground 6s infinite; }
+
+.two {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+.three {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg); }
+
+.four {
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg); }
+
+.five {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg); }
+
+.six {
+  -webkit-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  transform: rotate(225deg); }
+
+.seven {
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg); }
+
+.eight {
+  -webkit-transform: rotate(315deg);
+  -ms-transform: rotate(315deg);
+  transform: rotate(315deg); }
+
+@-webkit-keyframes animatedBackground {
+  0% {
+    background-position: 0 2px; }
+  50% {
+    background-position: 0 -295px; }
+  100% {
+    background-position: 0 -660px; } }
+@keyframes animatedBackground {
+  0% {
+    background-position: 0 2px; }
+  50% {
+    background-position: 0 -295px; }
+  100% {
+    background-position: 0 -660px; } }
+.loading_screen {
+  background: #FEFED7;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 1000; }
+
+/*# sourceMappingURL=style.css.map */
