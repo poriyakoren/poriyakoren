@@ -50,7 +50,7 @@ body
     position: inherit;
     top: 1.2vh;
     left: 50%;
-    width: 50%;
+    width: $window;
     list-style-type: none;
     padding: 0;
     @include crossBrowser(transform, translateX(-50%));
@@ -89,9 +89,9 @@ body
   {
     text-align: center;
     line-height: 25px;
-    padding: 10% 0 1% 0;
+    padding: 200px 0 1% 0;
     margin: 0 auto;
-    width: 50%;
+    width: $window;
     font-size: 1.2em;
     color: $font-color !important;
 
@@ -236,120 +236,82 @@ body
   }
 }
 
+@media screen and (max-width: $break-s){
+  .wrap{
+    height: 50px;
 
-
-
-
-
-
-
-/* LOADING SCREEN */
-
-.wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -52.60791px;
-  margin-top: -16.66667px;
-  -webkit-transform: rotate(22.5deg);
-      -ms-transform: rotate(22.5deg);
-          transform: rotate(22.5deg);
-}
-
-.octagon {
-  /*   z-index: 80; */
-  position: absolute;
-  background: #333333;
-  width: 105.21583px;
-  height: 105.21583px;
-  margin-top: -52.60791px;
-  -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-          clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-}
-
-.triangle {
-  position: absolute;
-  width: 105.21583px;
-  height: 125px;
-  -webkit-transform-origin: top center;
-      -ms-transform-origin: top center;
-          transform-origin: top center;
-  -webkit-clip-path: polygon(50% 0, 0% 100%, 100% 100%);
-          clip-path: polygon(50% 0, 0% 100%, 100% 100%);
-  background: url(http://i.imgur.com/QpNn5XZ.png) transparent no-repeat;
-  -webkit-animation: animatedBackground 6s infinite;
-          animation: animatedBackground 6s infinite;
-}
-
-.two {
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.three {
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
-.four {
-  -webkit-transform: rotate(135deg);
-      -ms-transform: rotate(135deg);
-          transform: rotate(135deg);
-}
-
-.five {
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-.six {
-  -webkit-transform: rotate(225deg);
-      -ms-transform: rotate(225deg);
-          transform: rotate(225deg);
-}
-
-.seven {
-  -webkit-transform: rotate(270deg);
-      -ms-transform: rotate(270deg);
-          transform: rotate(270deg);
-}
-
-.eight {
-  -webkit-transform: rotate(315deg);
-      -ms-transform: rotate(315deg);
-          transform: rotate(315deg);
-}
-
-@-webkit-keyframes animatedBackground {
-  0% {
-    background-position: 0 2px;
+    #nav
+    {
+      width: $window-s;
+    }
   }
-  50% {
-    background-position: 0 -295px;
-  }
-  100% {
-    background-position: 0 -660px;
+
+  .content
+  {
+    #about
+    {
+     width: $window-xs;
+    }
+
+    #footer
+    {
+      width: 90% !important;
+    }
   }
 }
 
-@keyframes animatedBackground {
-  0% {
-    background-position: 0 2px;
-  }
-  50% {
-    background-position: 0 -295px;
-  }
-  100% {
-    background-position: 0 -660px;
+@media screen and (max-width: $break-xs){
+  .wrap{
+    #nav
+    {
+      width: $window-xs;
+    }
   }
 }
-.loading_screen {
-  background: #FEFED7;
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  z-index: 1000;
+
+@media screen and (max-width: $break-xxs){
+  .wrap{
+    #nav
+    {
+      width: $window-xxs;
+
+      li
+      {
+        padding: 0 3%;
+      }
+    }
+  }
+
+  .content
+  {
+    #about
+    {
+     width: ($window-xxs - 5%);
+    }
+  }
+
+  #footer
+  {
+    text-align: center;
+
+    a
+    {
+      width: 100%;
+      display: block;
+    }
+
+    span
+    {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: $break-m){
+  .wrap{
+    #nav
+    {
+      width: $window-m;
+    }
+  }
 }
