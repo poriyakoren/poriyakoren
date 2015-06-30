@@ -23,6 +23,11 @@ body{
   color: white;
 }
 
+.nobpadding
+{
+  padding-bottom: 0 !important;
+}
+
 .clearer
 {
     clear: both;
@@ -36,13 +41,15 @@ body{
 
 body
 {
-  width: 100%
+  width: 100%;
+  height: 100%;
 }
 
 .wrap{
   background: $nav-color;
   width: 100vw;
   position: fixed;
+  z-index: 50;
   height: 60px;
 
   #nav
@@ -84,6 +91,9 @@ body
 
 .content{
   width: 100vw;
+  min-height:100vh;
+  position:relative;
+  z-index: 0;
 
   #title
   {
@@ -124,7 +134,7 @@ body
   {
     text-align: right;
     line-height: 25px;
-    padding: 10% 0 0 0;
+    padding: 150px 0 200px 0;
     margin: 0 auto;
     width: 55%;
     font-size: 1.2em;
@@ -179,7 +189,7 @@ body
 
     span.after
     {
-      padding-top: 8%;
+      padding-top: 10%;
     }
   }
 
@@ -189,13 +199,17 @@ body
     width: 55%;
     margin: 2.35% auto 0 auto;
 
-
     div
     {
       width: 500px;
       text-align: center;
 
-      &#first
+      &.secondmap
+      {
+        padding-bottom: 200px;
+      }
+
+      &#firstmap
       {
         float: right;
       }
@@ -211,10 +225,11 @@ body
 
 
   .footer_wrap{
-    position: relative;
-    bottom: 0;
-    margin-top: 10%;
-    width: 100%;
+    width:100%;
+    height:56px;
+    position:absolute;
+    bottom:0;
+    left:0;
     background: $nav-color;
 
     #footer
@@ -227,7 +242,7 @@ body
 
       *
       {
-        font-family: $s-font;
+        font-weight: 700;
         color: $s-font-color !important;
         text-decoration: none;
         padding: 0 1.5%;
@@ -312,6 +327,32 @@ body
     #nav
     {
       width: $window-m;
+    }
+  }
+
+  #title
+  {
+    span
+    {
+      line-height: 45px;
+    }
+  }
+
+  #about
+  {
+    p
+    {
+      padding-top: 10% !important;
+    }
+
+    span
+    {
+      padding-top: 10% !important;
+    }
+
+    span.after
+    {
+      padding-top: 2% !important;
     }
   }
 }
