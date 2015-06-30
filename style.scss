@@ -10,9 +10,6 @@
   @include crossBrowser(font-smoothing, antialiased);
 }
 
-body{
-  overflow-x: hidden;
-}
 
 ::selection {
   background: #2ecc71;
@@ -39,10 +36,21 @@ body{
   margin: 0;
 }
 
+html
+{
+  max-height: 100%;
+}
+
 body
 {
+  overflow-x: hidden;
   width: 100%;
-  height: 100%;
+  max-height: 100%;
+}
+
+#nav_but , .navshadow , #mobilenav
+{
+  display: none;
 }
 
 .wrap{
@@ -199,19 +207,27 @@ body
     width: 55%;
     margin: 2.35% auto 0 auto;
 
+
     div
     {
-      width: 500px;
+      margin: 0 auto;
       text-align: center;
 
-      &.secondmap
+      &#secondmap
       {
         padding-bottom: 200px;
+        float: left;
       }
 
       &#firstmap
       {
         float: right;
+      }
+
+      iframe
+      {
+        width: 500px;
+        height: 400px;
       }
 
       h5
@@ -273,6 +289,11 @@ body
       width: 90% !important;
     }
   }
+
+  #map
+  {
+    width: ($window-s + 7%) !important;
+  }
 }
 
 @media screen and (max-width: $break-xs){
@@ -280,6 +301,15 @@ body
     #nav
     {
       width: $window-xs;
+    }
+  }
+
+  #map
+  {
+    div
+    {
+      float: none !important;
+      margin: 0 auto;
     }
   }
 }
@@ -305,19 +335,24 @@ body
     }
   }
 
-  #footer
+  .footer_wrap
   {
-    text-align: center;
+    height: 130px !important;
 
-    a
+    #footer
     {
-      width: 100%;
-      display: block;
-    }
+      height: 130px;
+      text-align: center;
+      a
+      {
+        width: 100%;
+        display: block;
+      }
 
-    span
-    {
-      display: none;
+      span
+      {
+        display: none;
+      }
     }
   }
 }
@@ -332,6 +367,8 @@ body
 
   #title
   {
+    padding-top: 120px !important;
+
     span
     {
       line-height: 45px;
@@ -340,6 +377,8 @@ body
 
   #about
   {
+    padding-top: 120px !important;
+
     p
     {
       padding-top: 10% !important;
@@ -353,6 +392,117 @@ body
     span.after
     {
       padding-top: 2% !important;
+    }
+  }
+
+  #map
+  {
+    width: $window-xxs !important;
+
+    div
+    {
+      iframe
+      {
+        width: 80vw !important;
+        height: 70vw !important;
+      }
+    }
+  }
+
+
+
+  #nav_but , .navshadow , #mobilenav
+  {
+    display: block;
+  }
+
+    #mobilenav{
+    position: fixed;
+    z-index: 100;
+    margin: 0 auto;
+    text-align: center;
+    list-style: none;
+    top: 50%;
+    right: 50%;
+    @include crossBrowser(transform, translate(50%,-50%));
+
+    li{
+        a{
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $s-font-color;
+            line-height: 90px;
+            font-size: 1.5em;
+        }
+        a:hover{
+            border-bottom: 7px solid white;
+        }
+      }
+    }
+
+    div.navshadow{
+      position: fixed;
+      z-index: 99;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.85);
+      filter: alpha(opacity = 50);
+    }
+
+    #nav_but{
+    cursor: pointer;
+    position: fixed;
+    z-index: 100;
+    left: 3%;
+    top: 4%;
+    width: 60px;
+    height: 48px;
+    @include crossBrowser(user-select, none);
+
+    #toggle {
+        width: 28px;
+        height: 30px;
+        margin: 10px auto;
+    }
+
+    #toggle div {
+        width: 100%;
+        height: 5px;
+        background: black;
+        margin: 4px auto;
+        @include crossBrowser(transition, all 0.3s);
+        backface-visibility: hidden;
+    }
+
+
+    #toggle.on .one {
+        @include crossBrowser(transform, rotate(405deg) translate(5px, 5px));
+    }
+
+    #toggle.on .two {
+        @include crossBrowser(opacity, 0);
+    }
+
+    #toggle.on .three {
+        @include crossBrowser(transform, rotate(-405deg) translate(7px, -8px));
+    }
+  }
+
+  .wrap{
+    display: none;
+  }
+}
+
+@media screen and (max-width: $break-b){
+  #map
+  {
+    div
+    {
+      iframe
+      {
+        max-width:  387.5px;
+        max-height: 310px;
+      }
     }
   }
 }
