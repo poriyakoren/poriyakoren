@@ -227,7 +227,7 @@ body {
     #about span {
       padding-top: 10% !important; }
     #about span.after {
-      padding-top: 2% !important; }
+      padding-top: 80px !important; }
 
   #map {
     width: 90% !important; }
