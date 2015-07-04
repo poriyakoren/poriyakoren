@@ -82,8 +82,8 @@ body {
   .content #title {
     text-align: center;
     line-height: 25px;
-    padding: 200px 0 1% 0;
-    margin: 0 auto;
+    padding: 120px 0 120px 0;
+    margin: 100px auto 0 auto;
     width: 50%;
     font-size: 1.2em;
     color: LightSlateGray !important; }
@@ -110,6 +110,8 @@ body {
     color: LightSlateGray !important; }
     .content #about.aboutspecial {
       padding-top: 100px; }
+    .content #about.aboutindex {
+      padding-top: 40px; }
     .content #about h3 {
       width: 90%;
       margin: 0 auto;
